@@ -4,7 +4,18 @@ class WxAccessToken
 {
     private $access_token;
     private $appid;
-    private $appsecrete;
+    private $appsecret;
     
+    //构造方法
+    public function __construct($appid, $appsecret)
+    {
+        if (!$appid || !$appsecret)
+        {
+            exit('param error!');
+        }
+        $this->appid = $appid;
+        $this->appsecret = $appsecret;
+    }
+
 }
 ?>
